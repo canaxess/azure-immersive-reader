@@ -1,6 +1,3 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
 function getImmersiveReaderTokenAsync() {
     return new Promise(function (resolve, reject) {
         $.ajax({
@@ -37,3 +34,37 @@ function launchImmersiveReader(data, options) {
         });
     });
 }
+
+function handleLaunchImmersiveReader(){
+    const data = {
+        title: $('#title').text().trim(),
+        chunks: [{
+            content: selectedText(),
+            lang: 'en'
+        }]
+    };
+    launchImmersiveReader(data);
+}
+
+function selectedText()
+{
+    var text = "";
+    if (window.getSelection)
+    {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control")
+    {
+        text = document.selection.createRange().text;
+    }
+    if(text == "")
+    {
+        text=$('#default').text();
+    }
+    return text;
+}
+
+$(function(){
+    $('button').click(function() {
+        handleLaunchImmersiveReader();
+    });
+});

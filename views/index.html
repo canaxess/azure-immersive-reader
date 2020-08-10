@@ -1,22 +1,15 @@
-<!-- Copyright (c) Microsoft Corporation. All rights reserved.
-     Licensed under the MIT License. -->
-
 <!doctype html>
-<html lang="e-us">
+<html lang="en-AU">
 <head>
     <meta charset="utf-8">
-    <title>AZURE Immersive Reader Example | CANAXESS</title>
+    <title>AZURE Immersive Reader | CANAXESS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://contentstorage.onenote.office.net/onenoteltir/immersivereadersdk/immersive-reader-sdk.1.0.0.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-    <script type="text/javascript" src="js/helpers.js"></script>
+    <script type="text/javascript" src="../js/helpers.js"></script>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="../css/styles.css" rel="stylesheet">
-    <link href="../css/buttons.css" rel="stylesheet">
 
 </head>
 
@@ -34,16 +27,12 @@
 			<p>To use:</p>
 
 			<ol>
-				<li>Highlight text (either mouse or screen select on modile devices
-				)
-				</li>
+				<li>Highlight text (either mouse or screen select on modile devices)</li>
 				<li>Click Launch Reader</li>
 			</ol>
 
 				
-            <button onclick="handleLaunchImmersiveReader()" class="btn btn-primary">
-                Launch Reader
-            </button>
+            <button class="btn btn-primary">Launch Reader</button>
 
 			<hr>
 
@@ -62,36 +51,6 @@
 
         </section>
     </main>
-
-	<script type="text/javascript">
-		function handleLaunchImmersiveReader(){
-			const data = {
-				title: $('#title').text().trim(),
-				chunks: [{
-					content: selectedText(),
-					lang: 'en'
-				}]
-			};
-			launchImmersiveReader(data);
-		}
-
-		function selectedText()
-		{
-			var text = "";
-			if (window.getSelection)
-			{
-				text = window.getSelection().toString();
-			} else if (document.selection && document.selection.type != "Control")
-			{
-				text = document.selection.createRange().text;
-			}
-			if(text === "")
-			{
-				text=$('#default').text();
-			}
-			return text;
-		}
-	</script>
 	</div>
 </body>
 </html>
