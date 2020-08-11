@@ -10,47 +10,46 @@
     <script type="text/javascript" src="../js/helpers.js"></script>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="../css/style.css"> 
 </head>
 
 <body class="body">
-<div class="container">
-	
-    <main>
-        <section>
-
-			<h1>Immersive Reader</h1>
-
-			<p>Demo showing how Microsoft Azure cognitive services Immersive Reader can be used to assist a users literacy and comprehension. A website may have sections of text at an advanced reading age, the tool could be used to assist a user to understand individual words, sections of text or the entire content. Additionally it could be used as technique to pass WCAG 2.1 AAA 3.1.5 Reading Level and 3.1.6 Pronunciation Level AAA.
-			</p>
-
-			<p>To use:</p>
-
+	<div class="p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+		<div class="container">
+			<h1>Azure Immersive Reader</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div>
+			<p>This shows how the Immersive Reader tool could be used to assist a users literacy and comprehension.
+			Websites may have sections of text at an advanced reading age, the tool could help a user to understand individual words, sections of text or the entire content.</p>
+			<p>Additionally, it could be used as technique to pass more significant WCAG 2.1 success criteria <a href="https://www.w3.org/WAI/WCAG21/Understanding/unusual-words.html">3.1.3 Unusual Words AAA</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/reading-level.html">3.1.5 Reading Level AAA</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/pronunciation.html">3.1.6 Pronunciation AAA</a>.</p>
+			<h2>How to use</h2>
 			<ol>
-				<li>Highlight text (either mouse or screen select on modile devices)</li>
-				<li>Click Launch Reader</li>
+				<li>Highlight all or some of the text</li>
+				<li>Select the 'Launch Reader' button</li>
 			</ol>
+		</div>
+		<div class="alert alert-info alert-styling">
+			<div class="horizontal-alignment">
+				<p class="font-weight-bold item">(text for demonstration purposes)</p>
+				<button class="btn btn-primary">Launch Reader<img src="../images/icon.svg" alt="" /></button>
+			</div>
+			<textarea col="40" rows="10" id="default">
+These terms and conditions create a contract between you and Apple (the “Agreement”). Please read the Agreement carefully. To confirm your understanding and acceptance of the Agreement, click “Agree.”
 
-				
-            <button class="btn btn-primary">Launch Reader</button>
-
-			<hr>
-
-			<p>The below text is used for demonstration purposes</p>
-
-			<i>
-            <h2 id="title">Terms and Conditions</h2>
-            <p id="default">These terms and conditions create a contract between you and Company (the “Agreement”). Please read the Agreement carefully. To confirm your understanding and acceptance of the Agreement, click “Agree.”</p>
-
-			<p>The following terms and conditions are subject to consumer protection laws, including the Competition and Consumer Act 2010 (Cth) and other applicable Australian consumer protection laws and regulations. The contractual rights you may be entitled to under these terms and conditions are in addition to the statutory rights you may be entitled to under the Competition and Consumer Act 2010 (Cth) and other applicable Australian consumer protection laws and regulations.</p>
+The following terms and conditions are subject to consumer protection laws, including the Competition and Consumer Act 2010 (Cth) and other applicable Australian consumer protection laws and regulations. The contractual rights you may be entitled to under these terms and conditions are in addition to the statutory rights you may be entitled to under the Competition and Consumer Act 2010 (Cth) and other applicable Australian consumer protection laws and regulations.</textarea>
 			
-			<p>A. INTRODUCTION TO OUR SERVICES</p>
-			
-			<p>This Agreement governs your use of Company’s services (“Services”), through which you can buy, get, license, rent or subscribe to content, apps (“Apps”), and other in-app services (collectively, “Content”). Content may be offered through the Services by Company or a third party. Our Services are available for your use in your country of residence (“Home Country”). To use our Services, you need compatible hardware, software (latest version recommended and sometimes required) and Internet access (fees may apply). Our Services’ performance may be affected by these factors.</p>
-			</i>
-
-        </section>
-    </main>
+		</div>
+		
+		<footer class="pt-4 my-md-5 border-top">
+			<div class="row">
+				<div class="col-12 col-md">
+					<p><a href="">Article: Helping low levels of literacy with Azure cognitive services</a><br>
+					A <a href="https://www.canaxess.com.au">CANAXESS</a> Project</p>
+			  	</div>
+			</div>
+		</footer>
 	</div>
 </body>
 </html>

@@ -1,0 +1,24 @@
+.item
+{
+    flex-grow:2;
+}
+
+img
+{
+    width:20px;
+    height:20px;
+    margin-left:5px;
+}
+
+.horizontal-alignment
+{
+    display: flex;
+    flex-flow: row;
+    align-items:baseline;
+}
+
+.alert-styling
+{
+    display: flex;
+    flex-flow: column;
+}

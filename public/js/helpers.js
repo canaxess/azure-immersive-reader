@@ -37,7 +37,7 @@ function launchImmersiveReader(data, options) {
 
 function handleLaunchImmersiveReader(){
     const data = {
-        title: $('#title').text().trim(),
+        title: "Immersive Reader",
         chunks: [{
             content: selectedText(),
             lang: 'en'
