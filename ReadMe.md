@@ -22,8 +22,6 @@
     SUBDOMAIN={YOUR_SUBDOMAIN}
     ```
 
-1. Run `yarn build:dev`
-
 1. Run `yarn run start` (or `nodemon start` if you want to view changes you make after doing a browser refresh)
 
 1. Open a web browser and navigate to [http://localhost:3000](http://localhost:3000) to view the sample
