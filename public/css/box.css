@@ -1,0 +1,29 @@
+.box
+{
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+}
+
+.individualBox
+{
+	flex: 1 1 0px;
+	border-radius:5px;
+	margin:5px;
+	background-color:#F2F7F9;
+	font-size:22px;
+	border-bottom:1px solid #b7b7b7
+}
+
+.top
+{
+	padding:15px;
+	background:white;
+	border:1px solid #EBEBEB;
+}
+
+.bottom
+{
+	padding:15px;
+
+}
