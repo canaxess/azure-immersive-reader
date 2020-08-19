@@ -330,8 +330,7 @@
 
     .contactForm-control{
         display:inline-block;
-        max-width:21em;
-        
+        /*max-width:21em;*/        
         font-size:1.375rem
     }
 

@@ -176,7 +176,11 @@ article div.image{
 }
 
 .content ul,.content ol{
-    max-width:620px;
+    
+    background-color: #FFD8B1;
+    padding: 15px;
+
+    /*max-width:620px;*/
     font-size:1.125rem;
     line-height:1.5625rem;
     margin-bottom:25px
