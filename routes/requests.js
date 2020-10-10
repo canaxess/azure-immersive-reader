@@ -42,15 +42,12 @@ router.get('/setframework', function (req, res) {
         switch (frameworkRequest.toLowerCase()) 
         {
             case 'react':
-                console.log(`REACT requested`);
                 process.env.FRAMEWORK = "REACT";
                 break;
             case 'angular':
-                console.log(`ANGULAR requested`);
                 process.env.FRAMEWORK = "ANGULAR";
                 break;
             case 'vue':
-                console.log(`VUE requested`);
                 process.env.FRAMEWORK = "VUE";
                 break;
             default:

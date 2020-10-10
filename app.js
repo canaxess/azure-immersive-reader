@@ -7,10 +7,12 @@ var requestsRouter = require('./routes/requests');
 
 var app = express();
 
+const cors = require('cors');
+
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'))
 
 app.use('/', viewsRouter);
-app.use('/', requestsRouter);
+app.use('/', cors(), requestsRouter);
 
 module.exports = app;
