@@ -29,42 +29,17 @@ router.get('/subdomain', function (req, res) {
     return res.send(process.env.SUBDOMAIN);
 })
 
-router.get('/renderCSSframework', function (req, res) {
-    return res.send({ framework: process.env.CSSFRAMEWORK });
+router.get('/getframework', function (req, res) {
+    return res.send({ JSframework: process.env.JSFRAMEWORK, CSSframework: process.env.CSSFRAMEWORK });
 });
 
-router.get('/setCSSframework', function (req, res) {
+router.get('/setframework', function (req, res) {
     //only sets the ENV for the process
-    let cssframeworkRequest = req.query.CSSFRAMEWORK;
+    let frameworkRequest = req.query.FRAMEWORK;
     
-    if(typeof cssframeworkRequest !== 'undefined')
+    if(typeof frameworkRequest !== 'undefined')
     {
-        switch (cssframeworkRequest.toLowerCase()) 
-        {
-            case 'bootstrap':
-                process.env.CSSFRAMEWORK = "BOOTSTRAP";
-                break;
-            case 'foundation':
-                process.env.CSSFRAMEWORK = "FOUNDATION";
-                break;
-            default:
-                console.log(`not an allowed CSS framework [${cssframeworkRequest}]`);
-        }
-    }
-    return res.sendStatus(200)
-});
-
-router.get('/renderJSframework', function (req, res) {
-    return res.send({ framework: process.env.JSFRAMEWORK });
-});
-
-router.get('/setJSframework', function (req, res) {
-    //only sets the ENV for the process
-    let jsframeworkRequest = req.query.JSFRAMEWORK;
-    
-    if(typeof jsframeworkRequest !== 'undefined')
-    {
-        switch (jsframeworkRequest.toLowerCase()) 
+        switch (frameworkRequest.toLowerCase()) 
         {
             case 'react':
                 process.env.JSFRAMEWORK = "REACT";
@@ -75,8 +50,14 @@ router.get('/setJSframework', function (req, res) {
             case 'vue':
                 process.env.JSFRAMEWORK = "VUE";
                 break;
+            case 'bootstrap':
+                process.env.CSSFRAMEWORK = "BOOTSTRAP";
+                break;
+            case 'foundation':
+                process.env.CSSFRAMEWORK = "FOUNDATION";
+                break;
             default:
-                console.log(`not an allowed framework [${jsframeworkRequest}]`);
+                console.log(`not an allowed framework [${frameworkRequest}]`);
         }
     }
     return res.sendStatus(200)
