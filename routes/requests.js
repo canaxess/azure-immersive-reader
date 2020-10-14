@@ -29,29 +29,54 @@ router.get('/subdomain', function (req, res) {
     return res.send(process.env.SUBDOMAIN);
 })
 
-router.get('/renderframework', function (req, res) {
-    return res.send({ framework: process.env.FRAMEWORK });
+router.get('/renderCSSframework', function (req, res) {
+    return res.send({ framework: process.env.CSSFRAMEWORK });
 });
 
-router.get('/setframework', function (req, res) {
+router.get('/setCSSframework', function (req, res) {
     //only sets the ENV for the process
-    let frameworkRequest = req.query.FRAMEWORK;
+    let cssframeworkRequest = req.query.CSSFRAMEWORK;
     
-    if(typeof frameworkRequest !== 'undefined')
+    if(typeof cssframeworkRequest !== 'undefined')
     {
-        switch (frameworkRequest.toLowerCase()) 
+        switch (cssframeworkRequest.toLowerCase()) 
         {
-            case 'react':
-                process.env.FRAMEWORK = "REACT";
+            case 'bootstrap':
+                process.env.CSSFRAMEWORK = "BOOTSTRAP";
                 break;
-            case 'angular':
-                process.env.FRAMEWORK = "ANGULAR";
-                break;
-            case 'vue':
-                process.env.FRAMEWORK = "VUE";
+            case 'foundation':
+                process.env.CSSFRAMEWORK = "FOUNDATION";
                 break;
             default:
-                console.log(`not an allowed framework [${frameworkRequest}]`);
+                console.log(`not an allowed CSS framework [${cssframeworkRequest}]`);
+        }
+    }
+    return res.sendStatus(200)
+});
+
+router.get('/renderJSframework', function (req, res) {
+    return res.send({ framework: process.env.JSFRAMEWORK });
+});
+
+router.get('/setJSframework', function (req, res) {
+    //only sets the ENV for the process
+    let jsframeworkRequest = req.query.JSFRAMEWORK;
+    
+    if(typeof jsframeworkRequest !== 'undefined')
+    {
+        switch (jsframeworkRequest.toLowerCase()) 
+        {
+            case 'react':
+                process.env.JSFRAMEWORK = "REACT";
+                break;
+            case 'angular':
+                process.env.JSFRAMEWORK = "ANGULAR";
+                break;
+            case 'vue':
+                process.env.JSFRAMEWORK = "VUE";
+                break;
+            default:
+                console.log(`not an allowed framework [${jsframeworkRequest}]`);
         }
     }
     return res.sendStatus(200)
