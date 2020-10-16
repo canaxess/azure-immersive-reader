@@ -8,11 +8,12 @@ var requestsRouter = require('./routes/requests');
 var app = express();
 
 const cors = require('cors');
+var corsOptions = { origin: '*', credentials: true };
 
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'))
 
 app.use('/', viewsRouter);
-app.use('/', cors(), requestsRouter);
+app.use('/', cors(corsOptions), requestsRouter);
 
 module.exports = app;
