@@ -30,7 +30,7 @@ router.get('/subdomain', function (req, res) {
 })
 
 router.get('/getframework', function (req, res) {
-    return res.send({ JSframework: process.env.JSFRAMEWORK, CSSframework: process.env.CSSFRAMEWORK, CANAXESS: "www.canaxess.com.au" });
+    return res.send({ JSframework: process.env.JSFRAMEWORK, CSSframework: process.env.CSSFRAMEWORK, CANAXESS: "http://www.canaxess.com.au" });
 });
 
 router.get('/setframework', function (req, res) {
