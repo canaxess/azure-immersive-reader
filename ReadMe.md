@@ -1,4 +1,4 @@
-# Azure Immersive Reade
+# Azure Immersive Reader
 
 Immersive reader is a Microsoft Azure cognitive services tool to help a user's ability to understand content on a page. It's a single API call which displays a dialog containing the page content and a range of reading options including highlighting nouns, verbs and adjectives.
 
