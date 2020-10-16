@@ -9,6 +9,8 @@ Follow [these instructions](https://docs.microsoft.com/azure/cognitive-services/
 ## About
 This is a Node.js Express server which handles routing and API calls to Microsoft Azure for active directory authentication and immersive reader capability. DOTENV is used to manage environment variables, several of which are exposed via API calls allowing the changing of the process environment variables during runtime.
 
+**Cross-origin resource sharing (CORS) is enabled on Express for eventual frontend UI decoupling.**
+
 ## Development Environment
 
 1. Run `yarn run start` (or `nodemon start` if you want to view changes you make after doing a browser refresh)
