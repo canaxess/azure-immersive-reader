@@ -36,4 +36,5 @@ Two endpoints exist to get and set environment variables for the Node process.
 
 * Decouple the frontend UI from the Node.js server
 * Replace JQuery event handlers with React
+* Use promises with the fetch API
 
