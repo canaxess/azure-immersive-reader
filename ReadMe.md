@@ -17,7 +17,7 @@ This is a Node.js Express server which handles routing and API calls to Microsof
 1. Open a web browser and navigate to [http://localhost:3000](http://localhost:3000) to view the sample
 
 ## CI/CD Integration
-* `git push` triggers an automatic deployment to Heroku [https://canaxess-immersive-reader.herokuapp.com/](https://canaxess-immersive-reader.herokuapp.com/)
+* `git push` triggers an automatic deployment to [Heroku](https://canaxess-immersive-reader.herokuapp.com/)
 
 ## API endpoints
 Two endpoints exist to get and set environment variables for the Node process.
