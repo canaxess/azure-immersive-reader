@@ -19,19 +19,6 @@ This is a Node.js Express server which handles routing and API calls to Microsof
 ## CI/CD Integration
 * `git push` triggers an automatic deployment to [Heroku](https://canaxess-immersive-reader.herokuapp.com/)
 
-## API endpoints
-Two endpoints exist to get and set environment variables for the Node process.
-
-* `/getframework` returns the Javascript and CSS frameworks as JSON
-* `/setframework` sets the Javascript and CSS framework environment variables for the process as a GET method i.e. `/setframework?framework=BOOTSTRAP`
-
-**Allowed values**
-* `framework=REACT|ANGULAR|VUE|BOOTSTRAP|FOUNDATION`
-
-**URLs**
-* [https://canaxess-immersive-reader.herokuapp.com/getframework](https://canaxess-immersive-reader.herokuapp.com/getframework)
-* [https://canaxess-immersive-reader.herokuapp.com/setframework?FRAMEWORK=VUE](https://canaxess-immersive-reader.herokuapp.com/setframework?FRAMEWORK=VUE)
-
 ## Todo improvements
 
 * Decouple the frontend UI from the Node.js server
