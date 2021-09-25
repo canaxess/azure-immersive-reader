@@ -4,6 +4,7 @@ function getImmersiveReaderTokenAsync() {
             url: '/getimmersivereadertoken',
             type: 'GET',
             success: function (token) {
+                console.log(token);
                 resolve(token);
             },
             error: function (err) {

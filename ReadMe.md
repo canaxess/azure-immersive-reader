@@ -13,6 +13,7 @@ This is a Node.js Express server which handles routing and API calls to Microsof
 
 ## Development Environment
 
+1. run `npm i` to install all dependencies
 1. Run `yarn run start` (or `nodemon start` if you want to view changes you make after doing a browser refresh)
 1. Open a web browser and navigate to [http://localhost:3000](http://localhost:3000) to view the sample
 
@@ -25,3 +26,5 @@ This is a Node.js Express server which handles routing and API calls to Microsof
 * Replace JQuery event handlers with React
 * Use promises with the fetch API
 
+## Azure details
+* The client secret expires on **25/03/2022**

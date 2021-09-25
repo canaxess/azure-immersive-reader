@@ -12,14 +12,14 @@ router.get('/getimmersivereadertoken', function(req, res) {
                 grant_type: 'client_credentials',
                 client_id: process.env.CLIENT_ID,
                 client_secret: process.env.CLIENT_SECRET,
-                resource: 'https://cognitiveservices.azure.com/'
+                resource: 'https://cognitiveservices.azure.com'
             }
+            
         },
-        function(err, resp, token) {
+        function(err, resq, token) {
             if (err) {
                 return res.status(500).send('CogSvcs IssueToken error');
             }
-
             return res.send(JSON.parse(token).access_token);
         }
     );
