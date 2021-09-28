@@ -10,8 +10,15 @@ Follow [these instructions](https://docs.microsoft.com/azure/cognitive-services/
 1. Run the `Create-ImmersiveReaderResource` powershell function using the below details:
 
 ```
-Create-ImmersiveReaderResource -SubscriptionName 'Pay-As-You-Go' -ResourceName 'CANAXESS-IR' -ResourceSubdomain 'CANAXESS' -ResourceSKU 'S0' -ResourceLocation 'australiaeast' -ResourceGroupName 'resource-group-australiaeast' -ResourceGroupLocation 'australiaeast' -AADAppDisplayName 'immersive-reader' -AADAppIdentifierUri 'https://immersivereader-canaxess' -AADAppClientSecret '<PARAMETER_VALUES>' -AADAppClientSecretExpiration '2022-06-01'
+Create-ImmersiveReaderResource -SubscriptionName '<PARAMETER_VALUES>' -ResourceName '<PARAMETER_VALUES>' 
+-ResourceSubdomain '<PARAMETER_VALUES>' -ResourceSKU '<PARAMETER_VALUES>' 
+-ResourceLocation '<PARAMETER_VALUES>' -ResourceGroupName '<PARAMETER_VALUES>' 
+-ResourceGroupLocation '<PARAMETER_VALUES>' -AADAppDisplayName '<PARAMETER_VALUES>' 
+-AADAppIdentifierUri '<PARAMETER_VALUES>' -AADAppClientSecret '<PARAMETER_VALUES>' 
+-AADAppClientSecretExpiration '<PARAMETER_VALUES>'
 ```
+
+Replacing `<PARAMETER_VALUES>` with your own values.
 
 ## About
 This is a Node.js Express server which handles routing and API calls to Microsoft Azure for active directory authentication and immersive reader capability. DOTENV is used to manage environment variables.
@@ -29,6 +36,6 @@ This is a Node.js Express server which handles routing and API calls to Microsof
 The **AADAppClientSecretExpiration** token expires on `2022-06-01`.
 
 ## Heroku
-Configuration variables need to set in Heroku to mirror the environment variables in the solution (not committed to repository).
+The configuration variables need to set in Heroku to mirror the environment variables in the solution (not committed to repository).
 
 
