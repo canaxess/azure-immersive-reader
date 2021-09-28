@@ -19,7 +19,7 @@ This is a Node.js Express server which handles routing and API calls to Microsof
 * `git push` triggers an automatic deployment to [Heroku](https://canaxess-immersive-reader.herokuapp.com/)
 
 ## Azure AAD
-The **AADAppClientSecretExpiration** is `2022-06-01`.
+The **AADAppClientSecretExpiration** expiry is `2022-06-01`.
 
 ## Heroku
 Config variables need to set in Heroku to mirror the environment variables in the solution (not committed to repository).
