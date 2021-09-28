@@ -7,13 +7,10 @@ var requestsRouter = require('./routes/requests');
 
 var app = express();
 
-const cors = require('cors');
-var corsOptions = { origin: 'https://react-aria-live-component.herokuapp.com', credentials: true };
-
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'))
 
 app.use('/', viewsRouter);
-app.use('/', cors(corsOptions), requestsRouter);
+app.use('/', requestsRouter);
 
 module.exports = app;

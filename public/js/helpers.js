@@ -1,10 +1,9 @@
 function getImmersiveReaderTokenAsync() {
     return new Promise(function (resolve, reject) {
         $.ajax({
-            url: '/getimmersivereadertoken',
+            url: '/GetToken',
             type: 'GET',
             success: function (token) {
-                console.log(token);
                 resolve(token);
             },
             error: function (err) {
@@ -18,7 +17,7 @@ function getImmersiveReaderTokenAsync() {
 function getSubdomainAsync() {
     return new Promise(function (resolve, reject) {
         $.ajax({
-            url: '/subdomain',
+            url: '/GetSubDomain',
             type: 'GET',
             success: function (subdomain) { resolve(subdomain); },
             error: function (err) { reject(err); }
@@ -41,6 +40,7 @@ function handleLaunchImmersiveReader(){
         title: "Immersive Reader",
         chunks: [{
             content: selectedText(),
+            mimeType: 'text/html',
             lang: 'en'
         }]
     };

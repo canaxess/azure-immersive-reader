@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 
-router.get('/getimmersivereadertoken', function(req, res) {
+router.get('/GetToken', function(req, res) {
     request.post({
             headers: {
                 'content-type': 'application/x-www-form-urlencoded'
@@ -25,7 +25,7 @@ router.get('/getimmersivereadertoken', function(req, res) {
     );
 });
 
-router.get('/subdomain', function (req, res) {
+router.get('/GetSubDomain', function (req, res) {
     return res.send(process.env.SUBDOMAIN);
 });
 

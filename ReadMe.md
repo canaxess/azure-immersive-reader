@@ -7,9 +7,7 @@ Read the article [Using Azure to help users with lower levels of literacy](https
 Follow [these instructions](https://docs.microsoft.com/azure/cognitive-services/immersive-reader/how-to-create-immersive-reader) to create an immersive reader resource and configure Azure active directory authentication.
 
 ## About
-This is a Node.js Express server which handles routing and API calls to Microsoft Azure for active directory authentication and immersive reader capability. DOTENV is used to manage environment variables, several of which are exposed via API calls allowing the changing of the process environment variables during runtime.
-
-**Cross-origin resource sharing (CORS) is enabled on Express for eventual frontend UI decoupling.**
+This is a Node.js Express server which handles routing and API calls to Microsoft Azure for active directory authentication and immersive reader capability. DOTENV is used to manage environment variables.
 
 ## Development Environment
 
@@ -20,11 +18,10 @@ This is a Node.js Express server which handles routing and API calls to Microsof
 ## CI/CD Integration
 * `git push` triggers an automatic deployment to [Heroku](https://canaxess-immersive-reader.herokuapp.com/)
 
-## Todo improvements
+## Azure AAD
+The **AADAppClientSecretExpiration** is `2022-06-01`.
 
-* Decouple the frontend UI from the Node.js server
-* Replace JQuery event handlers with React
-* Use promises with the fetch API
+## Heroku
+Config variables need to set in Heroku to mirror the environment variables in the solution (not committed to repository).
 
-## Azure details
-* The client secret expires on **25/03/2022**
+
