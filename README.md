@@ -21,7 +21,7 @@ Create-ImmersiveReaderResource -SubscriptionName '<PARAMETER_VALUES>' -ResourceN
 Replacing `<PARAMETER_VALUES>` with your own values.
 
 ## About
-This is a Node.js Express server which handles routing and API calls to Microsoft Azure for active directory authentication and immersive reader capability. DOTENV is used to manage environment variables.
+This is a Node.js Express server which handles routing and API calls to Microsoft Azure for active directory authentication and immersive reader capability. DOTENV is used to manage environment variables locally.
 
 ## Development Environment
 
