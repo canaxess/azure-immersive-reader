@@ -6,11 +6,13 @@ var viewsRouter = require('./routes/views');
 var requestsRouter = require('./routes/requests');
 
 var app = express();
+const cors = require('cors');
+var corsOptions = { origin: '*' };
 
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'))
 
 app.use('/', viewsRouter);
-app.use('/', requestsRouter);
+app.use('/', cors(corsOptions), requestsRouter);
 
 module.exports = app;
